@@ -32,7 +32,7 @@ if __name__ == "__main__":
     start_time = time.time()
     for filename in list_files:
         img = cv2.imread(os.path.join(input_folder, filename))
-        print(img.shape)
+        print(filename, img.shape)
         try:
             label = model.find_label(img)
         except:
